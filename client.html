@@ -1,6 +1,27 @@
-<script src="/socket.io/socket.io.js"></script>
-<script>
-  var socket = io();
+<!doctype html>
+<html>
 
-</script>
-<h1>Jinui Socket Chat</h1>
+<head>
+  <title>Jinui Web Chat</title>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+  </script>
+</head>
+
+<body>
+
+  <h1>Jinui Web Chat</h1>
+
+  <ul id="chat_box">
+
+  </ul>
+
+  <form action="">
+    <input id="m"/><button>Send</button>
+  </form>
+
+</body>
+
+</html>
