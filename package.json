@@ -1,11 +1,11 @@
 {
   "name": "socket_chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "chat web app using socket.io from node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jinui You",
   "license": "ISC"
 }
