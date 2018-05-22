@@ -3,10 +3,28 @@
 
 <head>
   <title>Jinui Web Chat</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script src="/socket.io/socket.io.js"></script>
   <script>
     var socket = io();
+
+    $(function() {
+
+      $('form').submit(function() {
+        socket.emit('chat message', $('#m').val());
+
+        $('#m').val('');
+
+        return false;
+      });
+
+
+    });
+
+    socket.on('broadcast message', function(msg) {
+      $('#chat_box').append($('<li>').text(msg));
+    });
   </script>
 
   <style>
@@ -63,9 +81,7 @@
 
   <h1>Jinui Web Chat</h1>
 
-  <ul id="chat_box">
-
-  </ul>
+  <ul id="chat_box"></ul>
 
   <form action="">
     <input id="m" /><button>Send</button>
